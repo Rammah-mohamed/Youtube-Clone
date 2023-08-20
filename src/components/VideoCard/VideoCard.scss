@@ -1,0 +1,45 @@
+@import '../../global.scss';
+.videoCard {
+  width: 100%;
+  height: 100%;
+  
+  .image {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px;
+
+    h3 {
+      margin-bottom: 15px;
+      color: #333;
+      width: 340px;
+      white-space: nowrap;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      font-size: 17px;
+    }
+    .channel {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+
+      h5 {
+        margin-right: 5px;
+        color: #666;
+      }
+
+      .icon {
+        color: $mainColor;
+        font-size: 14px;
+      }
+    }
+  }
+}

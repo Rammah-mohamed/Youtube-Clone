@@ -1,0 +1,15 @@
+@import './global.scss';
+.app {
+  background-color: $whiteColor;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+
+  @include mobile {
+    overflow-y: unset;
+  }
+  
+  &.darkTheme {
+    background-color: #000;
+  }
+}

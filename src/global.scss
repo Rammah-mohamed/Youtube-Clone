@@ -1,0 +1,16 @@
+$mainColor: #ff0000;
+$blackColor: #282828;
+$whiteColor: #f2f2f2;
+$small-width: '768px';
+$mid-width: '992px';
+
+@mixin mobile {
+  @media (max-width: #{$small-width}) {
+    @content;
+  }
+}
+@mixin midScreen {
+  @media (max-width: #{$mid-width}) {
+    @content;
+  }
+}

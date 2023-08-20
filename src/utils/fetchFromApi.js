@@ -1,17 +1,15 @@
-const axios = require("axios");
+import axios from "axios";
+const BASE_URL = 'https://youtube-v3-alternative.p.rapidapi.com';
 
-const BASE_URL = 'https://youtube-v31.p.rapidapi.com'
 const options = {
   url: BASE_URL,
-  params: {maxResults: '50'},
   headers: {
-    'X-RapidAPI-Key': 'db22c86adamshe004de27ce874f7p17e8d6jsnfe2550df29fc',
-    'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
+    'X-RapidAPI-Key': 'bff455d4dfmsh196bf9b08bacb33p1efd8bjsn485fc9dac3a6',
+    'X-RapidAPI-Host': 'youtube-v3-alternative.p.rapidapi.com'
   }
 };
 
-export const fetchFromApi = async (url) => {
-  const {data} = await axios.get(`${BASE_URL}/${url}`, options)
-
-  return data
-}
+export const fetchFromApi = async (query) => {
+    const {data} = await axios.get(`${BASE_URL}/${query}`,options);
+    return data
+  }
