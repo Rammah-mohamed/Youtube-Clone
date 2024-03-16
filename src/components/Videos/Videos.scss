@@ -1,39 +1,43 @@
-@import '../../global.scss';
+@import "../../global.scss";
+
 .videos {
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  padding: 25px;
-  scrollbar-width: none; //firefox
-  &::-webkit-scrollbar {
-    display: none;
-  }
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	padding: 25px;
+	scrollbar-width: none; //firefox
 
-  h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 
-    @include midScreen {
-      font-size: 32px;
-    }
-    span {
-      color: $mainColor;
-    }
-  }
-  .videosWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: center;
-    gap: 15px;
+	h1 {
+		font-size: 40px;
+		margin-bottom: 10px;
 
-    .box {
-      padding: 20px 0;
-      flex: 1 0 250px;
-      border-bottom: 2px solid $mainColor;
-      border-radius: 10px;
-      overflow: hidden;
-      cursor: pointer;
-    }
-  }
+		@include midScreen {
+			font-size: 32px;
+		}
+
+		span {
+			color: $mainColor;
+		}
+	}
+
+	.videosWrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: start;
+		align-items: center;
+		gap: 15px;
+
+		.box {
+			padding: 20px 0;
+			flex: 1 0 250px;
+			border-bottom: 2px solid $mainColor;
+			border-radius: 10px;
+			overflow: hidden;
+			cursor: pointer;
+		}
+	}
 }

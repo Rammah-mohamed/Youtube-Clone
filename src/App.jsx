@@ -1,38 +1,39 @@
-import {useState} from 'react'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Home from './components/Home/Home'
-import VideoDetails from './components/VideoDetails/VideoDetails'
-import ChannelDetails from './components/ChannelDetails/ChannelDetails'
-import Search from './components/Search/Search'
-import Navbar from './components/Navbar/Navbar'
-import './App.scss'
+import { useContext, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import VideoDetails from "./pages/VideoDetails/VideoDetails";
+import ChannelDetails from "./pages/ChannelDetails/ChannelDetails";
+import Search from "./pages/Search/Search";
+import Navbar from "./components/Navbar/Navbar";
+import "./App.scss";
+import { DarkModeContext } from "./context/darkModeContext";
 
 export default function App() {
-  const [selectedCategory, setSelectedCategory] = useState('New')
-  const [showSidebar, setShowSidebar] = useState(false)
-  const [darkTheme, setDarkTheme] = useState(false)
+	const [selectedCategory, setSelectedCategory] = useState("New");
+	const [showSidebar, setShowSidebar] = useState(false);
+	const { darkMode } = useContext(DarkModeContext);
 
-  return (
-    <div className={ darkTheme ? 'app darkTheme' : 'app'}>
-      <BrowserRouter>
-        <Navbar setShowSidebar={setShowSidebar} 
-        darkTheme={darkTheme} 
-        setDarkTheme={setDarkTheme}
-        />
-        <Routes>
-          <Route path='/' exact element={
-          <Home
-            selectedCategory={selectedCategory}
-            setSelectedCategory={setSelectedCategory}
-            showSidebar={showSidebar}
-            darkTheme={darkTheme}
-            />} 
-          />
-          <Route path='/video/:id' element={<VideoDetails darkTheme={darkTheme}/>} />
-          <Route path='/channel/:id' element={<ChannelDetails darkTheme={darkTheme}/>} />
-          <Route path='/search/:searchTerm' element={<Search darkTheme={darkTheme}/>} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  )
+	return (
+		<div className={darkMode ? "app darkTheme" : "app"}>
+			<BrowserRouter>
+				<Navbar setShowSidebar={setShowSidebar} />
+				<Routes>
+					<Route
+						path='/'
+						exact
+						element={
+							<Home
+								selectedCategory={selectedCategory}
+								setSelectedCategory={setSelectedCategory}
+								showSidebar={showSidebar}
+							/>
+						}
+					/>
+					<Route path='/video/:id' element={<VideoDetails />} />
+					<Route path='/channel/:id' element={<ChannelDetails />} />
+					<Route path='/search/:searchTerm' element={<Search />} />
+				</Routes>
+			</BrowserRouter>
+		</div>
+	);
 }

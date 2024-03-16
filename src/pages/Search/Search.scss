@@ -1,0 +1,18 @@
+@import "../../global.scss";
+
+.search {
+	position: relative;
+	top: 60px;
+	width: 100%;
+	height: calc(100% - 60px);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+
+	.videos {
+		@include midScreen {
+			transform: translateY(50px);
+		}
+	}
+}

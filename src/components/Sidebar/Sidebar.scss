@@ -1,57 +1,56 @@
-@import '../../global.scss';
+@import "../../global.scss";
+
 .sidebar {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 300px;
-  height: 100%;
-  margin-right: 20px;
-  margin-left: 10px;
-  padding: 40px 20px;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  border-right: 2px solid $mainColor;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 300px;
+	height: 100%;
+	padding: 30px 20px;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	border-right: 2px solid $mainColor;
 
-@include midScreen {
-  height: unset;
-  width: 100vw;
-  margin-right: 0;
-  padding: 50px 15px 0;
-  overflow-y: unset;
-}
+	&::-webkit-scrollbar {
+		display: none;
+	}
 
-  button {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border: none;
-    background: transparent;
-    margin-bottom: 10px;
-    padding: 6px;
-    border-radius: 10px;
-    cursor: pointer;
+	@include midScreen {
+		height: unset;
+		width: 100vw;
+		margin-right: 0;
+		padding: 50px 15px 0;
+		overflow-y: unset;
+	}
 
-    @include midScreen {
-      justify-content: center;
-    }
+	button {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		border: none;
+		background: transparent;
+		margin-bottom: 10px;
+		padding: 6px;
+		border-radius: 10px;
+		cursor: pointer;
 
-    .icon {
-      color: $mainColor;
-      margin-right: 15px;
-    }
+		@include midScreen {
+			justify-content: center;
+		}
 
-    .name {
-      color: #000;
-      font-size: 16px;
-      font-weight: 400;
+		.icon {
+			color: $mainColor;
+			margin-right: 15px;
+		}
 
-      @include midScreen {
-        font-size: 14px;
-      }
-    }
+		.name {
+			color: #000;
+			font-size: 16px;
+			font-weight: 400;
 
-  }
+			@include midScreen {
+				font-size: 14px;
+			}
+		}
+	}
 }
