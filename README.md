@@ -1,2 +1,8 @@
-I Created This App With React Its A Youtube Clone Powered  By Rapid API Its Contains Categories. The Home Page Contains New Videos You Can Click At Any Video Thats Will Routes You To Another Page That You Can Watch The Video And There Is All Related Videos. Also you Have The Channel Name You Can You Can Click It And Go To The Channel Page
+# Youtube Clone
+## Insides:
+#### - Used axios to get an API calls and fetch videos data from youtube v3 API.
+#### - Used useEffect hook to make an api request depending on the selected category and search term that user was entered. 
+#### - Used useNavigate hook to change the page location to so the user can navigate between different pages.
+#### - Used SASS mixin to apply responsive design to the app.
+#### - used context api to apply the dark Theme.
 ## The Live App Link Is Here: https://react-my-youtube.netlify.app
