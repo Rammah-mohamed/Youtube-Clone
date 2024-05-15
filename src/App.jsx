@@ -12,6 +12,7 @@ export default function App() {
 	const [selectedCategory, setSelectedCategory] = useState("New");
 	const [showSidebar, setShowSidebar] = useState(false);
 	const { darkMode } = useContext(DarkModeContext);
+	console.log("test");
 
 	return (
 		<div className={darkMode ? "app darkTheme" : "app"}>
