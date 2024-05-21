@@ -1,2 +1,5 @@
-I Created This App With React Its A Youtube Clone Powered  By Rapid API Its Contains Categories. The Home Page Contains New Videos You Can Click At Any Video Thats Will Routes You To Another Page That You Can Watch The Video And There Is All Related Videos. Also you Have The Channel Name You Can You Can Click It And Go To The Channel Page
-## The Live App Link Is Here: https://react-my-youtube.netlify.app
+# YouTube Clone
+### 1-Integrated the YouTube Data API to fetch video data, including titles, descriptions, thumbnails, and view counts, ensuring up-to-date and relevant content for users.
+### 2-Designed an intuitive user interface with features such as a search bar, video thumbnails, video player with playback controls, and related videos sidebar
+### 3-Enhanced the user experience with responsive design principles, ensuring compatibility across various devices and screen sizes.
+## Live Demo: https://youtube-clone-virid-zeta.vercel.app
